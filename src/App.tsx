@@ -14,7 +14,9 @@ import {
   LogOut,
   CheckCircle2,
   AlertCircle,
-  ArrowRight
+  ArrowRight,
+  MapPin,
+  Github
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -460,6 +462,51 @@ export default function App() {
         )}
       </section>
 
+      {/* --- Location Section --- */}
+      <section id="location" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-orange-100">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <div className="flex items-center gap-2 text-orange-600 font-semibold">
+              <MapPin size={20} />
+              <span>Kunjungi Outlet Kami</span>
+            </div>
+            <h3 className="text-3xl font-bold text-gray-900 italic">Lokasi Mutiara Snack</h3>
+            <p className="text-gray-600 leading-relaxed max-w-lg">
+              Datang dan rasakan langsung kerenyahan camilan kami. Kami berlokasi di pusat Waru, Sidoarjo, sangat mudah diakses oleh kendaraan pribadi maupun umum.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-start gap-4 p-4 bg-white rounded-2xl border border-orange-50 shadow-sm">
+                <div className="p-2 bg-orange-100 text-orange-600 rounded-xl">
+                  <MapPin size={20} />
+                </div>
+                <div>
+                  <p className="font-bold text-gray-900">Alamat Lengkap</p>
+                  <p className="text-sm text-gray-600">Jl. Niaga Utama No. 12, Waru, Sidoarjo, Jawa Timur</p>
+                </div>
+              </div>
+              <a 
+                href="https://goo.gl/maps/placeholder" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-orange-600 font-bold hover:underline"
+              >
+                Buka di Google Maps <ArrowRight size={16} />
+              </a>
+            </div>
+          </div>
+          
+          <div className="rounded-[3rem] overflow-hidden shadow-2xl shadow-orange-100 border-4 border-white h-[400px] bg-gray-200 relative grayscale hover:grayscale-0 transition-all duration-500">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15827.643864700055!2d112.7208885!3d-7.363842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb905186b515%3A0xc3f8b030438c7f12!2sWaru%2C%20Sidoarjo%20Regency%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1714900000000!5m2!1sen!2sid" 
+              className="w-full h-full border-0"
+              allowFullScreen={true}
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* --- Footer --- */}
       <footer id="footer" className="bg-orange-950 text-orange-50 pt-20 pb-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -486,7 +533,15 @@ export default function App() {
             <div>
               <h5 className="font-bold text-white mb-8 uppercase tracking-[0.2em] text-xs">Informasi</h5>
               <p className="text-orange-200/60 mb-3 font-mono text-sm">{WHATSAPP_NUMBER}</p>
-              <p className="text-orange-200/60 text-sm">mutiarasnack@gmail.com</p>
+              <p className="text-orange-200/60 text-sm mb-6">mutiarasnack@gmail.com</p>
+              <a 
+                href="https://github.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 rounded-xl text-orange-200 transition-all text-xs font-bold"
+              >
+                <Github size={16} /> Repository Github
+              </a>
             </div>
             <div>
               <h5 className="font-bold text-white mb-8 uppercase tracking-[0.2em] text-xs">Operasional</h5>
